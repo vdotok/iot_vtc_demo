@@ -1,0 +1,348 @@
+@font-face {
+    font-family: manrope-bold;
+    src: url("../../assets/fonts/Manrope-Bold.ttf");
+  }
+  @font-face {
+    font-family: manrope-semibold;
+    src: url("../../assets/fonts/Manrope-SemiBold.ttf");
+  }
+  @font-face {
+    font-family: manrope-medium;
+    src: url("../../assets/fonts/Manrope-Medium.ttf");
+  }
+  @font-face {
+    font-family: inter-regular;
+    src: url("../../assets/fonts/Inter-Regular.ttf");
+  }
+  @font-face {
+    font-family: inter-medium;
+    src: url("../../assets/fonts/Inter-Medium.ttf");
+  }
+  @font-face {
+    font-family: dm-bold;
+    src: url("../../assets/fonts/DMSans-Bold.ttf");
+  }
+  
+  * {
+    padding: 0;
+    margin: 0;
+  }
+  .row {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+  html,
+  body,
+  span {
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+  }
+  div,
+  p {
+    padding: 0;
+    margin: 0;
+  }
+  a,
+  a:hover {
+    text-decoration: none;
+  }
+  :root {
+    scrollbar-color: #c4c4c4 #cacccf !important;
+    scrollbar-width: 5px !important;
+  }
+  ::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    /* box-shadow: inset 0 0 5px black; */
+    border-radius: 5px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #c4c4c4;
+    border-radius: 5px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: grey;
+  }
+  .mainContainer {
+    height: auto;
+    width: 100%;
+    background-color: yellow;
+    overflow: hidden;
+    position: relative;
+    overflow: hidden;
+  }
+  .header {
+    height: 70px;
+    width: 100%;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 3%;
+    padding-right: 3%;
+    box-shadow: inset 0px -1.5px 0px #e2e2ea;
+  }
+  .contentWrapper {
+    height: calc(100% - 140px);
+    width: 100%;
+   background-color: #fdfdfd;
+    padding-left: 3%;
+    padding-right: 3%;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+  }
+  .logo {
+    height: 55px;
+    width: 55px;
+    object-fit: contain;
+  }
+  .mapwrapper {
+    min-height: 400px;
+    width: 100%;
+    height: 400px;
+    border-radius: 20px;
+    background-color: yellow;
+    /* background-color: rgb(124, 124, 100); */
+    /* margin-bottom: 40px; */
+    /* overflow: hidden; */
+  }
+  .settingsLogo {
+    height: 30px;
+    width: 30px;
+    object-fit: contain;
+    cursor: pointer;
+  }
+  .cardsContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+    flex-wrap: wrap;
+    padding-top: 23px;
+    padding-bottom: 23px;
+}
+  .singleCardContainer {
+    height: 220px;
+    width: 48%;
+    background-image: linear-gradient(to right, #4e9d93, #24bdb2);
+    /* background-color: white; */
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-bottom: 0px;
+    border-radius: 5px;
+    transition: 0.5s;
+    /* transition: height 1s; */
+    transition-timing-function: ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .singleCardContainer:hover {
+    /* background-color: #24bdb2; */
+    background-image: linear-gradient(to right, #24bdb2, #4e9d93);
+    /* border-radius: 20px; */
+    box-shadow: 0px 0px 30px 3px #9cfff9;
+  }
+  .iconContainer {
+    height: 70px;
+    width: 13%;
+    border-radius: 70px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin-right: 20px; */
+  }
+  .cardIcon {
+    height: 60%;
+    width: 60%;
+    object-fit: contain;
+  }
+  .cardContnetContainer {
+    width: 27%;
+    display: flex;
+    flex-direction: column;
+  }
+  .graphclass {
+    width: 60%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+  .cardText {
+    font-family: manrope-bold;
+    font-size: 35px;
+    line-height: 40px;
+    color: white;
+  }
+  .cardSubText {
+    font-family: manrope-medium;
+    font-size: 20px;
+    line-height: 25px;
+    color: white;
+    opacity: 0.95;
+    letter-spacing: 1px;
+    margin-top: 5px;
+  }
+  .controlcontainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 23%;
+    justify-content: space-between;
+    height: 70px;
+    /* background-color: #86dbd6; */
+    background-image: linear-gradient(to right, #4e9d93, #24bdb2);
+    border-top: 1.5px solid #e2e2ea;
+    padding-right: 5%;
+    padding-left: 5%;
+    margin-right: 1%;
+    margin-left: 1%;
+    margin-bottom: 14px;
+    border-radius: 5px;
+  }
+  #customSwitch {
+    height: 30px;
+    width: 60px;
+    background-color: white;
+    position: relative;
+    -webkit-appearance: none;
+    outline: none;
+    border-radius: 30px;
+    transition: 0.5s;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, o.2);
+  }
+  #customSwitch:checked {
+    background-color: white;
+  }
+  #customSwitch:before {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    top: 0;
+    left: 0;
+    background-color: #ffe23f;
+  
+    /* transform:scale(1.1); */
+    box-shadow: 0 2px 5px (0, 0, 0, 0.2);
+    transition: 0.5s;
+  }
+  #customSwitch:checked:before {
+    left: 30px;
+  }
+  .switchContainer {
+    display: flex;
+    align-items: center;
+  }
+  .customSwitchLabel {
+    margin-left: 20px;
+    font-size: 18px;
+    font-family: manrope-medium;
+    color: white;
+  }
+  .inputContainer {
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    height: 50px;
+    border-radius: 20px;
+    overflow: hidden;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+  .executeButton {
+    height: 40px;
+    width: 100px;
+    cursor: pointer;
+  
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0d0d31;
+  }
+  .executeInput {
+    background-color: white;
+    border-width: 0px;
+    font-family: manrope-medium;
+  
+    font-size: 16px;
+    line-height: 18px;
+  
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.12px;
+  
+    color: #93b9b2;
+  }
+  .buttonText {
+    font-family: manrope-medium;
+    color: #fce769;
+  }
+  
+  .executeInput:focus {
+    border-color: white;
+    box-shadow: 0 0 0 0.2rem white;
+  }
+  .mapContainerr {
+    background-color: #00C0B5;
+    display: flex;
+    flex-direction: column;
+    min-height: 330px;
+    width: 100%;
+    height: 330px;
+    overflow: hidden;
+    border-radius: 20px;
+    margin-bottom: 23px;
+  }
+  .switches {
+    margin-bottom: 13px;
+  }
+  .graphclass canvas {
+    background-color: #dadada40;
+  }
+  /* #map {
+    min-height: 400px;
+    width: 100%;
+    border-radius: 20px;
+  } */
+  @media screen and (max-width: 768px) {
+    .cardsContainer {
+      justify-content: center;
+    }
+  }
+  @media screen and (min-width: 768px) {
+  }
+  .selectTimer{
+    width: 96%;
+    height: 30px;
+    margin: 5px;
+
+  }
+  /* .react-switch-bg {
+    background: rgb(86 73 73) !important;
+}
+.react-switch-bg:checked {
+  background: red !important;
+} */
+
+.react-switch-handle {
+  /* background-color: black; */
+  background: #fbfbfb !important;
+}
